@@ -1,0 +1,17 @@
+.todolist{
+    display: flex;
+    color: #fff;
+    margin-top: -30rem;
+    padding: 600px;
+    font-size: 20px;
+    justify-content: space-between;
+    
+}
+hr{ 
+    margin: 40px 0;
+
+}
+.hr1{
+    border: 0;
+    border-top: 1px dashed #FFF;
+}

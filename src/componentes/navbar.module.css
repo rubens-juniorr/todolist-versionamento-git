@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    text-align: center;
+    background-color: #0C70F2;
+    color: #FFF;
+    height: 9.5vh;
+}
+
+.navbar h2{
+    margin-left: 3rem;
+    margin-top: 25px;
+}
+.navtarefa{
+    background-color: #FFF;
+    color: #0C70F2;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 19px;
+    padding-bottom: 15px;
+    border-radius: 10px 10px 0 0;
+    
+}
