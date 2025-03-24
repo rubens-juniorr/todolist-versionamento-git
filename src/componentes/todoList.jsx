@@ -1,31 +1,61 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon  from '@mui/icons-material/Delete';
+import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
+import { useState } from 'react';
+import { Container } from '@mui/system';
 
 //CSS
 import styled from "./todoList.module.css"
 
+
 export default function TodoList() {
+  const tarefas = ['estudar', 'estudar', 'futvôlei'];
+  const [tarefa, setTarefa] = useState([]);
+  const [novaTarefa, setNovaTarefa] = useState('');
+
+  const handleChange = (e) => {
+    setNovaTarefa(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTarefa([...tarefa, novaTarefa]);
+    setNovaTarefa('');
+  }
+
+  const handleDelete = (index) => {
+    const novasTarefas = [...tarefa];
+    novasTarefas.splice(index, 1);
+    setTarefa(novasTarefas);
+  }
 
         return (
-            <div className= {styled.todolist}>
-              <div>
+   
+            <Container  maxWidth="md">
+              <div className= {styled.todolist}>
                 <h3>Tarefa</h3>
-              </div>
-              <div>
                 <h3>Status</h3>
-              </div>
-              <div>
                 <h3>Opções</h3>
               </div>
-              <hr />
-            </div>
-          
+              <hr className={styled.separator}/>
+              <div>
+                  <ul> 
+                    {
+                      tarefas.map((tarefa, index) => (
+                        <li key={index}>
+                          <span>{tarefa}</span>
+                          <input type="checkbox"/>
+                          <button type='submit' onClick={() => handleChange(index)}><MdEdit /></button>
+                          <button type='submit' onClick={() => handleDelete(index)}><MdDelete/></button>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                  <div>
+                    <button  type='submit' className={styled.btn} onClick={handleSubmit}>+</button>
+                  </div>
+              </div>
+                
+    </Container>
   );
-}
+} 
