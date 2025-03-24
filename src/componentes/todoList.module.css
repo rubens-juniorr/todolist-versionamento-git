@@ -1,17 +1,54 @@
 .todolist{
     display: flex;
     color: #fff;
-    margin-top: -30rem;
-    padding: 600px;
-    font-size: 20px;
+    font-size: 25px;
+    margin-bottom: 20px;
     justify-content: space-between;
+   
     
 }
-hr{ 
-    margin: 40px 0;
-
+hr{
+    width: 103%;
+    height: 10px;
 }
-.hr1{
-    border: 0;
-    border-top: 1px dashed #FFF;
+.separator{
+    color: #FFF;
+    background-color: #FFF;
+    height: 2px;
+    
+}
+ul{
+    color: #FFF;
+    list-style-type: none;
+}
+li{
+    margin-left: 12px;
+    font-family: Raleway, sans-serif;
+    margin-top: 30px;
+}
+input{
+    inline-size: 45rem;
+    border: none;
+    color: #FFF;
+    display: inline-block;
+ 
+}
+
+button{
+
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    margin-right: 10px;
+}
+p{
+    margin-top: 20px;
+    color: #FFF;
+    display: inline-block;
+}
+.btn{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 815px;
 }
