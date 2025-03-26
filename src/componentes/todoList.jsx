@@ -9,7 +9,6 @@ import styled from "./todoList.module.css"
 
 
 export default function TodoList() {
-  const tarefas = ['estudar', 'estudar', 'futvôlei'];
   const [tarefa, setTarefa] = useState([]);
   const [novaTarefa, setNovaTarefa] = useState('');
 
@@ -41,21 +40,22 @@ export default function TodoList() {
               <div>
                   <ul> 
                     {
-                      tarefas.map((tarefa, index) => (
+                      tarefa.map((item, index) => (
                         <li key={index}>
-                          <span>{tarefa}</span>
-                          <input type="checkbox"/>
-                          <button type='submit' onClick={() => handleChange(index)}><MdEdit /></button>
-                          <button type='submit' onClick={() => handleDelete(index)}><MdDelete/></button>
+                          <p>{item}</p>
+                          <input type="checkbox" style={{height: '18px'}}/>
+                          <button type='submit' className={styled.buttons} onChange={handleChange}><MdEdit /></button>
+                          <button type='submit' className={styled.buttons} onClick={() => handleDelete(index)}><MdDelete/></button>
                         </li>
                       ))
                     }
                   </ul>
                   <div>
+                    <input type="text" value={novaTarefa} onChange={handleChange} placeholder="Nova tarefa...."  
+                    style={{color: 'white', backgroundColor: '#2D2D2D', border: 'none', fontSize: '18px', marginTop: '20px', width: '20%'}}/>
                     <button  type='submit' className={styled.btn} onClick={handleSubmit}>+</button>
                   </div>
               </div>
-                
     </Container>
   );
 } 
