@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Raleway, sans-serif;
 }
 
 .todolist{
@@ -25,9 +26,7 @@ ul{
     color: #FFF;
     list-style-type: none;
 }
-li{
-    font-family: Raleway, sans-serif;
-}
+
 input{
     inline-size: 45rem;
     border: none;
@@ -35,18 +34,11 @@ input{
     cursor: pointer;
     outline: none;
 }
-
-.buttons{
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    color: #FFF;
-    font-size: 30px;
-    padding-left: 10px;
-    margin-top: -50px;
-}
 p{
+   
     color: #FFF;
+    width: 200px;
+
 }
 .btn{
     cursor: pointer;
@@ -54,5 +46,43 @@ p{
     border: none;
     color: #FFF;
     font-size: 20px;
-    margin-left: 760px;
+    margin-left: 664px;
+    margin-top: 10px;
+    
+}
+.checkbox{
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 190px;
+}
+.buttons{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 25px;
+    
+}
+.acoes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between ;
+}
+.modalEdit{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+} 
+.buttonsModal{
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 50px;
+    border: 1px solid #000000;
+    color: #FFF;
+    font-size: 30px;
+    border-radius: 6px;
+    margin-left: 110px;
 }
